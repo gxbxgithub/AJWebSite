@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MongoDB</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input id="name" type="text" name="name" placeholder="请输入姓名"><br>
+	<input id="email" type="text" name="email" placeholder="请输入邮箱地址"><br>
+	<input id="password" type="password" name="password" placeholder="请输入密码"><br>
+	<a href="javascript:;" onclick="commit();">提交</a>
+	<a href="javascript:;" onclick="del();">删除</a>
+	<a href="javascript:;" onclick="edit();">修改</a>
+
+	<ul>
+		<li></li>
+	</ul>
+
+	<script src="./js/jquery-2.1.4.min.js"></script>
+	<script>
+		function commit(){
+			var name = $('#name').val(),
+				email = $('#email').val(),
+				password = $('#password').val();
+			$.post('/gxb/api/user_info/user_regist', {name: name, email: email, password: password}, function(data){
+				console.log(data)
+			})
+		}
+		function del(){
+			$.post('/gxb/api/user_info/user_delete', {email: 'gxbxemail@163.com'}, function(data){
+				console.log(data)
+			})
+		}
+		function edit(){
+			$.post('/gxb/api/user_info/user_edit', {email: 'gxbxemail@163.com'}, function(data){
+				console.log(data)
+			})
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	hello world !
+
+	<script src="./js/jquery-2.1.4.min.js"></script>
+	<script>
+		$.post('/gxb/api/user_info/user_regist', {name: 'guoxb', age: '26'}, function(data){
+			console.log(data)
+		})
+	</script>
+</body>
+</html>

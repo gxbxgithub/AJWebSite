@@ -1,0 +1,17 @@
+{
+  "name": "keystone_demo",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "ejs-mate": "^2.1.1",
+    "keystone": "^0.3.10",
+    "lodash": "^3.9.3"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.3.x"
+  },
+  "scripts": {
+    "start": "web.js"
+  }
+}
