@@ -2,10 +2,16 @@ var keystone = require('keystone'),
 	importRoutes = keystone.importer(__dirname);
 
 var routes = {
-	pc: importRoutes('./pc')
+	site: importRoutes('./site')
 };
 
 exports.route = function(app) {
-	// 首页
-	app.get('/', routes.pc.pc_site);
+	// Main
+	app.get('/', routes.site.main);
+	app.get('/site_main/blog', routes.site.main.go_blog);
+
+    // User
+    app.post('/site_user/user_regist', routes.site.user.user_regist);
+    app.post('/site_user/user_delete', routes.site.user.user_delete);
+    app.post('/site_user/user_edit', routes.site.user.user_edit);
 }

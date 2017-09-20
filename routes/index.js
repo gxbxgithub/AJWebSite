@@ -23,11 +23,9 @@ keystone.set('500', function(err, req, res, next) {
 });
  
 // 加载路由
-var pc_routes  = require('./site_route');
-var api_routes = require('./api_route');
+var site_routes  = require('./site_route');
 
 // 绑定路由
 exports = module.exports = function(app) {
-    pc_routes.route(app);
-    api_routes.route(app);
+    site_routes.route(app);
 }

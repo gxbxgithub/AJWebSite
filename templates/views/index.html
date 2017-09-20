@@ -3,15 +3,27 @@
 <head>
 	<title>Index</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
 </head>
 <body>
-	hello world !
+	<canvas id="canvas"></canvas>
+	<div id="container" class="trans_form">
+		<div id="header">
+			<h1 class="fz24 crfff lh30">郭晓波的个人网站</h1>
+			<p class="fz14 crfff lh20">Guo Xiaobo's Personal Website</p>
+		</div>
+		<div id="content">
+			<ul>
+				<li><a href="/site_main/blog">» 网络日志</a></li>
+				<!--<li><a href="/blog">» 博客</a></li>-->
+			</ul>
+		</div>
+		<div id="footer">
+			<p class="fz14 crfff lh20"><a href="/contact">Contact</a> | guoxb.me</p>
+		</div>
+	</div>
 
-	<script src="./js/jquery-2.1.4.min.js"></script>
-	<script>
-		$.post('/gxb/api/user_info/user_regist', {name: 'guoxb', age: '26'}, function(data){
-			console.log(data)
-		})
-	</script>
+	<script src="./js/lib/jquery-2.1.4.min.js"></script>
+	<script src="./js/starry_sky.js"></script>
 </body>
 </html>

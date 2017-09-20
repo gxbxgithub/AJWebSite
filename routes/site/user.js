@@ -1,5 +1,4 @@
 var keystone = require('keystone');
-var http_tools = require('../../lib/httpUtils');
 
 // model
 var User = keystone.list('User').model;

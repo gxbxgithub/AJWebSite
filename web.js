@@ -1,7 +1,8 @@
 var keystone = require('keystone'),
     express = require('express'),
     mongoose = require('mongoose'),
-    app = express();
+    app = express(),
+    http_tools = require('./lib/httpUtils');
 
 keystone.init({
   
@@ -24,11 +25,10 @@ keystone.init({
   'cookie secret': 'admin',
 
   'port': 3002
-  
 });
- 
+
 require('./models');
- 
+
 // keystone.set('app', app);
 // keystone.set('mongoose', mongoose);
 keystone.set('routes', require('./routes'));
